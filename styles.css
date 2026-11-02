@@ -99,3 +99,20 @@ button { cursor: pointer; }
 .lead { margin-block: 20px 36px; font-size: clamp(1rem, 1.5vw, 1.1875rem); max-width: 34em; }
 .hero-art svg { width: 100%; height: auto; max-height: 520px; margin-inline: auto; }
 
+.stats { position: relative; z-index: 1; margin-top: -8px; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.stat { display: flex; align-items: center; gap: 20px; padding: 24px 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.stat-icon { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--red-tint); color: var(--red); }
+.stat-icon svg { width: 26px; height: 26px; }
+.stat strong { display: block; font-size: 1.75rem; line-height: 1.2; font-weight: 700; color: var(--ink); }
+.stat span { color: var(--muted); }
+
+.section { padding-block: clamp(56px, 8vw, 104px); }
+.section-tint { background: var(--bg); }
+.section-head { max-width: 640px; margin: 0 auto clamp(32px, 5vw, 56px); text-align: center; }
+h1, h2 { text-wrap: balance; }
+.section-head h2 { font-size: clamp(1.625rem, 3.2vw, 2.375rem); line-height: 1.25; font-weight: 700; color: var(--ink); }
+.section-head p { margin-top: 14px; }
+.section-head-row { max-width: none; margin-inline: 0; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; text-align: left; }
+.section-head-row > div { max-width: 600px; }
+
