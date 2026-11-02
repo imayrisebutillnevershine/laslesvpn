@@ -33,5 +33,72 @@
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  </body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="LaslesVPN home">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span>LaslesVPN</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="link-quiet" href="#">Sign In</a>
+          <a class="btn btn-outline" href="#">Sign Up</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Want anything to be easy with <span class="accent">LaslesVPN.</span></h1>
+          <p class="lead">Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.</p>
+          <a class="btn btn-primary btn-lg" href="#pricing">Get Started</a>
+        </div>
+        <div class="hero-art">
+          <svg viewBox="0 0 560 480" role="img" aria-label="LaslesVPN app showing an active, encrypted connection">
+            <defs>
+              <linearGradient id="g-shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6B6B"/><stop offset="1" stop-color="#F53838"/></linearGradient>
+              <filter id="f-shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#F53838" flood-opacity=".22"/></filter>
+              <pattern id="p-dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.600" fill="#F5A3A3"/></pattern>
+            </defs>
+            <path d="M92 150c20-80 120-120 210-104s190 60 206 160-30 170-130 206-210 22-262-40S72 230 92 150Z" fill="#FFE5E5"/>
+            <rect x="440" y="70" width="90" height="90" rx="20" fill="url(#p-dots)"/>
+            <rect x="40" y="320" width="110" height="80" rx="20" fill="url(#p-dots)"/>
+            <g filter="url(#f-shadow)">
+              <rect x="130" y="80" width="300" height="340" rx="28" fill="#fff"/>
+            </g>
+            <circle cx="162" cy="112" r="6" fill="#FFB4B4"/><circle cx="182" cy="112" r="6" fill="#FFD6D6"/><circle cx="202" cy="112" r="6" fill="#FFE9E9"/>
+            <path d="M280 150 214 178v62c0 44 28 78 66 92 38-14 66-48 66-92v-62l-66-28Z" fill="url(#g-shield)"/>
+            <path d="m250 242 22 22 40-46" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="280" y="372" text-anchor="middle" font-family="Rubik, system-ui, sans-serif" font-size="20" font-weight="700" fill="#2b2b2b">You are protected</text>
+            <rect x="200" y="386" width="160" height="14" rx="7" fill="#FFE5E5"/><rect x="200" y="386" width="118" height="14" rx="7" fill="#F53838"/>
+            <g>
+              <rect x="372" y="168" width="150" height="52" rx="26" fill="#fff" filter="url(#f-shadow)"/>
+              <circle cx="400" cy="194" r="9" fill="#2FCB6E"/>
+              <text x="418" y="199" font-family="Rubik, system-ui, sans-serif" font-size="15" font-weight="500" fill="#2b2b2b">Warsaw</text>
+              <rect x="56" y="248" width="150" height="52" rx="26" fill="#fff" filter="url(#f-shadow)"/>
+              <path d="M84 266v18m0 0-7-7m7 7 7-7" fill="none" stroke="#F53838" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="106" y="279" font-family="Rubik, system-ui, sans-serif" font-size="15" font-weight="500" fill="#2b2b2b">94 Mbps</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+      </main>
+</body>
 </html>
