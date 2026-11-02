@@ -220,6 +220,158 @@
       </div>
     </section>
 
-      </main>
+    <section class="section section-tint" id="testimonials" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head section-head-row">
+          <div>
+            <h2 id="reviews-title">Trusted by Thousands of Happy Customer</h2>
+            <p>These are the stories of our customers who have joined us with great pleasure when using this crazy feature.</p>
+          </div>
+          <div class="carousel-controls">
+            <button class="icon-btn" type="button" data-dir="-1" aria-label="Previous reviews"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+            <button class="icon-btn icon-btn-solid" type="button" data-dir="1" aria-label="Next reviews"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+          </div>
+        </header>
+
+        <div class="reviews" tabindex="0" aria-label="Customer reviews">
+          <article class="review">
+            <header>
+              <img src="assets/viezh.jpg" alt="" width="60" height="60" loading="lazy">
+              <div>
+                <h3>Viezh Robert</h3>
+                <p>Warsaw, Poland</p>
+              </div>
+              <p class="rating"><svg aria-hidden="true"><use href="#i-star"/></svg><span>4.3</span></p>
+            </header>
+            <blockquote><p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.</p></blockquote>
+          </article>
+          <article class="review">
+            <header>
+              <img src="assets/yessica.jpg" alt="" width="60" height="60" loading="lazy">
+              <div>
+                <h3>Yessica Christy</h3>
+                <p>Shanxi, China</p>
+              </div>
+              <p class="rating"><svg aria-hidden="true"><use href="#i-star"/></svg><span>4.8</span></p>
+            </header>
+            <blockquote><p>“I like it because I like to travel far and still can connect with high speed.”.</p></blockquote>
+          </article>
+          <article class="review">
+            <header>
+              <img src="assets/kim.jpg" alt="" width="60" height="60" loading="lazy">
+              <div>
+                <h3>Kim Young Jou</h3>
+                <p>Seoul, South Korea</p>
+              </div>
+              <p class="rating"><svg aria-hidden="true"><use href="#i-star"/></svg><span>4.6</span></p>
+            </header>
+            <blockquote><p>“This is very unusual for my business that currently requires a virtual private network that has high security.”.</p></blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="subscribe-title">
+      <div class="container">
+        <div class="subscribe">
+          <div class="subscribe-copy">
+            <h2 id="subscribe-title">Subscribe Now for Get Special Features!</h2>
+            <p>Let's subscribe with us and find the fun.</p>
+          </div>
+          <form class="subscribe-form" action="#" novalidate>
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn-light" type="submit">Subscribe Now</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="help">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="LaslesVPN home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+          <span>LaslesVPN</span>
+        </a>
+        <p>LaslesVPN is a private virtual network that has unique features and has high security.</p>
+        <ul class="socials" aria-label="Social media">
+          <li><a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="#" aria-label="Twitter"><svg aria-hidden="true"><use href="#i-twitter"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        </ul>
+      </div>
+      <nav aria-label="Product">
+        <h2>Product</h2>
+        <ul>
+          <li><a href="#">Download</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">Locations</a></li>
+          <li><a href="#">Server</a></li>
+          <li><a href="#">Countries</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Engage">
+        <h2>Engage</h2>
+        <ul>
+          <li><a href="#">LaslesVPN ?</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Earn money">
+        <h2>Earn Money</h2>
+        <ul>
+          <li><a href="#">Affiliate</a></li>
+          <li><a href="#">Become Partner</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p><small>&copy; 2026 LaslesVPN. All rights reserved.</small></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
+    });
+    nav.addEventListener('click', e => {
+      if (e.target.closest('a')) { toggle.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); }
+    });
+
+    const track = document.querySelector('.reviews');
+    document.querySelectorAll('.carousel-controls button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = track.querySelector('.review');
+        const step = card.getBoundingClientRect().width + 24;
+        track.scrollBy({ left: Number(btn.dataset.dir) * step, behavior: 'smooth' });
+      });
+    });
+
+    const form = document.querySelector('.subscribe-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const note = form.querySelector('.form-note');
+      const input = form.elements.email;
+      if (input.checkValidity() && input.value) {
+        note.textContent = 'Thanks for subscribing!';
+        form.reset();
+      } else {
+        note.textContent = 'Please enter a valid email address.';
+        input.focus();
+      }
+    });
+  </script>
 </body>
 </html>
